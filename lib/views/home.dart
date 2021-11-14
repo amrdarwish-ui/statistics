@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:statistics/models/chart_data_model.dart';
+import 'package:statistics/models/bar_data_model.dart';
+import 'package:statistics/models/line_data_model.dart';
+import 'package:statistics/models/pie_data_model.dart';
 import 'package:statistics/views/chart_view.dart';
 
 class Home extends StatelessWidget {
@@ -9,15 +11,63 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ChartView(
-        chartNum: 0,
-        title: 'Chart',
-        backgroundColor: Colors.grey,
+        chartNum: 4,
+        title: 'Bar Chart',
+        backgroundColor: Colors.orange,
         titleColor: Colors.white,
-        dataList: [
-          ChartDataModel(title: '30%', value: 30, color: 'a2663e'),
-          ChartDataModel(title: '15%', value: 15, color: '545481'),
-          ChartDataModel(title: '35%', value: 35, color: '567116'),
-          ChartDataModel(title: '20%', value: 20, color: '448421'),
+        maxY: 20,
+        maxX: 5,
+        minY: 1,
+        lineColor: Colors.black,
+        lineDataList: [
+          LineDataModel(
+            x: 1,
+            y: 8,
+          ),
+          LineDataModel(
+            x: 2,
+            y: 12,
+          ),
+          LineDataModel(
+            x: 3,
+            y: 10,
+          ),
+          LineDataModel(
+            x: 4,
+            y: 6,
+          ),
+          LineDataModel(
+            x: 8,
+            y: 10,
+          ),
+          LineDataModel(
+            x: 4,
+            y: 3,
+          ),
+          LineDataModel(
+            x: 7,
+            y: 15,
+          ),
+          LineDataModel(
+            x: 9.5,
+            y: 18.5,
+          ),
+          LineDataModel(
+            x: 6.5,
+            y: 7,
+          ),
+          LineDataModel(
+            x: 3.5,
+            y: 2,
+          ),
+          LineDataModel(
+            x: 4,
+            y: 17,
+          ),
+          LineDataModel(
+            x: 10,
+            y: 10,
+          ),
         ],
       ),
     );

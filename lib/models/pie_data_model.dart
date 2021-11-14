@@ -1,8 +1,8 @@
-class ChartDataModel {
+class PieDataModel {
   String title;
   double value;
   String color;
-  ChartDataModel({
+  PieDataModel({
     required this.title,
     required this.value,
     required this.color,
